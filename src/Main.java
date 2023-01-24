@@ -4,6 +4,7 @@ public class Main
 {
     public static void main(String[]args)
     {
+      System.out.println("Made a comment in replit");
         JFrame myFrame = new JFrame();
         myFrame.setSize(500,500);
         //DrawPanel myPanel = new DrawPanel();
@@ -11,7 +12,7 @@ public class Main
         // myFrame.add(myPanel);
         myFrame.add(bPanel);
         myFrame.setVisible(true);
-
+  
 
 
 
