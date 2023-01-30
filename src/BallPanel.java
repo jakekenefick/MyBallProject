@@ -36,12 +36,23 @@ public class BallPanel extends JPanel
 
         // calling the paintComponent method I overroad
 
-            int z = 0;
-            while(z <21) {
+
              super.paintComponent(g);
-                balls.drawBall();
-                setFocusable(true);
-            }
+               for(Ball drawBall: balls)
+               {
+                   drawBall.drawBall(g);
+
+               }
+               for(Ball moveBall:balls)
+               {
+                   moveBall.moveBall(g);
+               }
+               for(Ball checkBounce:balls)
+               {
+                   checkBounce.checkBounce(g);
+               }
+
+
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {

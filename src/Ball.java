@@ -1,5 +1,5 @@
 import java.awt.*;
-import javax.swing.*;
+
 public class Ball
 {
     private int x,y,size,xSpeed,ySpeed;
@@ -31,24 +31,27 @@ public class Ball
         cow.fillOval(x,y,size,size);
 
     }
-    public void moveBall()
+    public void moveBall(Graphics g)
     {
         x+=ySpeed;
         y+=ySpeed;
     }
-    public void checkBounce()
+    public void checkBounce(Graphics g)
     {
-        //if(x >= getWidth())
-        //x--;
+        if(x >= getWidth())
+        x--;
         if(x>=0)
             x++;
-        //if(y>=getHeight())
-        //x--;
+        if(y>=getHeight())
+        x--;
         if(y>=0)
             x++;
 
     }
-public void moveRight()
+
+
+
+    public void moveRight()
 {
     x =x +xSpeed;
 }
