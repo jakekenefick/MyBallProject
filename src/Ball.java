@@ -33,19 +33,20 @@ public class Ball
     }
     public void moveBall(Graphics g)
     {
-        x+=ySpeed;
+        x+=xSpeed;
         y+=ySpeed;
     }
     public void checkBounce(Graphics g)
     {
-        if(x >= getWidth())
-        x--;
-        if(x>=0)
-            x++;
-        if(y>=getHeight())
-        x--;
-        if(y>=0)
-            x++;
+      
+        if(x >= 470)
+        xSpeed = -xSpeed;
+        if(x<=0)
+            xSpeed = -xSpeed;
+        if(y>= 450)
+        ySpeed = -ySpeed;
+        if(y<=0)
+           ySpeed = -ySpeed;
 
     }
 
